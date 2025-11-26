@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cypher234.shop - Random 9 Cá 100% Ra 3s</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Arial Black', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bg-glow {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, #00d0ff30, transparent 70%);
+            animation: pulse 6s infinite;
+        }
+        @keyframes pulse {
+            0%,100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        .main {
+            text-align: center;
+            z-index: 2;
+            max-width: 500px;
+        }
+        .logo {
+            font-size: 60px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #00c3ff, #00ffea, #00c3ff);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: neon 3s infinite;
+            margin-bottom: 20px;
+            text-shadow: 0 0 40px #00c3ff80;
+        }
+        @keyframes neon {
+            0%,100% { background-position: 0%; }
+            50% { background-position: 100%; }
+        }
+        .banner {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            box-shadow: 0 0 50px #00c3ff60;
+            margin: 30px auto;
+            transition: all 0.4s;
+        }
+        .banner:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 80px #00eaff;
+        }
+        .title {
+            font-size: 32px;
+            color: #00ffea;
+            text-shadow: 0 0 20px #00ffea80;
+            margin: 20px 0;
+        }
+        .desc {
+            font-size: 20px;
+            color: #a0f8ff;
+            margin-bottom: 40px;
+        }
+        .enter-btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(45deg, #00c3ff, #00ff9d);
+            color: #000;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 195, 255, 0.5);
+            transition: all 0.4s;
+        }
+        .enter-btn:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 255, 200, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="main">
+        <h1 class="logo">CYPHR234</h1>
+        <img src="https://sf-static.upanhlaylink.com/img/image_20251124b381eb772af6c8b58d9718840b1773b8.jpg" class="banner" alt="Cypher234">
+        <div class="title">Cypher234.shop</div>
+        <div class="desc">Random 9k 100% ra 3s</div>
+        <a href="https://cypher234.shop" target="_blank" class="enter-btn">Ấn vào đây để vào shop ngay </a>
+    </div>
+</body>
+</html>
