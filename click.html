@@ -11,33 +11,19 @@
         background: #000;
         color: #fff;
         font-family: 'Arial Black', sans-serif;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        overflow: hidden;
-        position: relative;
-    }
-    .bg-glow {
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at center, #00d0ff30, transparent 70%);
-        animation: pulse 6s infinite;
-    }
-    @keyframes pulse {
-        0%,100% { opacity: 0.6; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.1); }
+        padding: 20px 10px;
+        overflow-x: hidden;
     }
 
     .main {
         text-align: center;
-        z-index: 2;
-        max-width: 500px;
+        max-width: 600px;
+        margin: auto;
     }
 
+    /* LOGO */
     .logo {
-        font-size: 60px;
+        font-size: 50px;
         font-weight: 900;
         background: linear-gradient(90deg, #00c3ff, #00ffea, #00c3ff);
         background-size: 200%;
@@ -52,129 +38,169 @@
         50% { background-position: 100%; }
     }
 
+    /* BANNER */
     .banner {
         width: 100%;
-        max-width: 420px;
         border-radius: 20px;
-        box-shadow: 0 0 50px #00c3ff60;
-        margin: 30px auto;
-        transition: all 0.4s;
-    }
-    .banner:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 80px #00eaff;
+        box-shadow: 0 0 40px #00c3ff80;
     }
 
+    /* TEXT */
     .title {
-        font-size: 32px;
+        font-size: 26px;
+        margin: 20px 0 10px 0;
         color: #00ffea;
-        text-shadow: 0 0 20px #00ffea80;
-        margin: 20px 0;
+        text-shadow: 0 0 15px #00fff680;
     }
     .desc {
-        font-size: 20px;
+        font-size: 18px;
         color: #a0f8ff;
         margin-bottom: 20px;
     }
 
-    /* -------- SLIDER FIXED -------- */
+    /* BUTTON */
+    .enter-btn {
+        display: inline-block;
+        padding: 18px 45px;
+        background: linear-gradient(45deg, #00c3ff, #00ff9d);
+        color: #000;
+        font-size: 22px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 40px;
+        box-shadow: 0 10px 30px rgba(0, 195, 255, 0.5);
+        transition: 0.3s;
+        margin-bottom: 30px;
+    }
+    .enter-btn:hover { transform: translateY(-6px); }
+
+    /* SLIDER */
     .slider {
-        position: relative;
-        width: 420px;
-        height: 210px;
-        margin: 0 auto 30px auto;
+        width: 100%;
+        max-width: 500px;
+        height: 250px;
+        margin: 0 auto 40px auto;
         overflow: hidden;
         border-radius: 20px;
         box-shadow: 0 0 30px #00eaff80;
+        position: relative;
     }
-
     .slide-track {
         display: flex;
         height: 100%;
-        transition: transform 0.8s ease;
+        transition: transform 0.7s ease;
     }
-
     .slide-track img {
-        width: 420px;
-        height: 210px;
-        flex-shrink: 0; /* ⭐ FIX ẢNH KHÔNG BỊ LẤN */
+        width: 100%;
+        height: 250px;
         object-fit: cover;
-        object-position: center;
+        object-position: top; /* ⭐ HIỂN THỊ PHẦN TRÊN CỦA ẢNH */
+        flex-shrink: 0;
         border-radius: 20px;
     }
 
+    /* SLIDER BUTTONS */
     .btn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: #00eaff90;
+        background: #00eaffb0;
         border: none;
-        padding: 10px 14px;
+        padding: 10px 15px;
         cursor: pointer;
         border-radius: 50%;
+        font-size: 20px;
         color: #000;
-        font-size: 18px;
         font-weight: bold;
         transition: 0.3s;
-        box-shadow: 0 0 15px #00eaff;
     }
-
-    .btn:hover { background: #00fff5; }
-
     .prev { left: 10px; }
     .next { right: 10px; }
+    .btn:hover { background: #00fff2; }
 
-    /* Dots */
-    .dots {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 12px;
-    }
+    /* DOTS */
+    .dots { display: flex; justify-content: center; gap: 10px; }
     .dot {
         width: 12px;
         height: 12px;
         background: #00c3ff70;
         border-radius: 50%;
-        cursor: pointer;
         transition: 0.3s;
+        cursor: pointer;
     }
     .dot.active {
         background: #00fff2;
         transform: scale(1.3);
     }
 
-    /* Button mua */
-    .enter-btn {
-        display: inline-block;
-        padding: 18px 50px;
+    /* BOX ZALO SECTION */
+    .box-section {
+        margin-top: 50px;
+        padding: 20px;
+        border-radius: 20px;
+        background: #00161caa;
+        box-shadow: 0 0 30px #00eaff50;
+    }
+    .box-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+        color: #00fff2;
+        text-shadow: 0 0 15px #00eaff90;
+        font-weight: bold;
+    }
+    .box-grid {
+        display: grid;
+        gap: 25px;
+    }
+
+    .zbox {
+        padding: 20px;
+        background: #002c33;
+        border-radius: 20px;
+        box-shadow: 0 0 20px #00eaff60;
+        text-align: center;
+    }
+    .qr {
+        width: 220px;
+        height: 220px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+    .zbox h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #00fff2;
+    }
+    .zbtn {
+        display: block;
+        padding: 14px;
         background: linear-gradient(45deg, #00c3ff, #00ff9d);
         color: #000;
-        font-size: 22px;
-        font-weight: bold;
         text-decoration: none;
-        border-radius: 50px;
-        box-shadow: 0 10px 30px rgba(0, 195, 255, 0.5);
-        transition: all 0.4s;
+        font-weight: bold;
+        border-radius: 40px;
+        box-shadow: 0 0 20px #00eaff80;
+        transition: 0.3s;
     }
-    .enter-btn:hover {
-        transform: translateY(-8px);
-    }
+    .zbtn:hover { transform: translateY(-5px); }
+
 </style>
 </head>
 
 <body>
-<div class="bg-glow"></div>
 
 <div class="main">
+
     <h1 class="logo">CYPHR234</h1>
 
     <img src="https://sf-static.upanhlaylink.com/img/image_20251124b381eb772af6c8b58d9718840b1773b8.jpg" class="banner">
 
-    <div class="title"><a href="https://cypher234.shop" style="color:#00ffea;text-decoration:none;">Cypher234.shop</a></div>
+    <div class="title">Cypher234.shop</div>
     <div class="desc">Random 9k 100% ra 3s</div>
 
-    <!-- SLIDER FIXED -->
+    <a href="https://cypher234.shop" target="_blank" class="enter-btn">ẤN VÀO ĐÂY ĐỂ VÀO SHOP NGAY</a>
+
+    <!-- SLIDER -->
     <div class="slider">
         <div class="slide-track" id="track">
             <img src="https://cypher234.shop/uploads/13-10-2025/b8e44189-2185-43fd-ba58-ef69e8080aa2.jpg">
@@ -194,7 +220,89 @@
         <div class="dot" onclick="goToSlide(3)"></div>
     </div>
 
-    <a href="https://cypher234.shop" target="_blank" class="enter-btn">Ấn vào đây để mua ngay</a>
+    <!-- ======================= -->
+    <!--      BOX ZALO           -->
+    <!-- ======================= -->
+
+    <div class="box-section">
+    <h2 class="box-title">BOX ZALO HỖ TRỢ & THÔNG BÁO RANDOM 9K</h2>
+
+    <style>
+        .box-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .zbox {
+            padding: 15px;
+            background: #00242a;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00eaff50;
+            text-align: center;
+        }
+
+        .qr {
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .zbox h3 {
+            font-size: 17px;
+            margin-bottom: 12px;
+            color: #00fff2;
+        }
+
+        .zbtn {
+            display: block;
+            padding: 10px;
+            background: linear-gradient(45deg, #00c3ff, #00ff9d);
+            color: #000;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 0 15px #00eaff80;
+            text-decoration: none;
+            transition: 0.2s;
+            font-size: 14px;
+        }
+
+        .zbtn:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+
+    <div class="box-grid">
+
+        <!-- BOX 1 -->
+        <div class="zbox">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://zalo.me/g/svqtaj150" class="qr">
+            <h3>BOX THÔNG BÁO VÀ HỖ TRỢ RANDOM 9K [1]</h3>
+            <a href="https://zalo.me/g/svqtaj150" class="zbtn" target="_blank">
+                Vào Box Ngay
+            </a>
+        </div>
+
+        <!-- BOX 2 -->
+        <div class="zbox">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://zalo.me/g/qczuvr355" class="qr">
+            <h3>BOX THÔNG BÁO VÀ HỖ TRỢ RANDOM 9K [2]</h3>
+            <a href="https://zalo.me/g/qczuvr355" class="zbtn" target="_blank">
+                Vào Box Ngay
+            </a>
+        </div>
+
+        <!-- BOX 3 -->
+        <div class="zbox">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://zalo.me/g/yblzjz709" class="qr">
+            <h3>BOX THÔNG BÁO VÀ HỖ TRỢ RANDOM 9K [3]</h3>
+            <a href="https://zalo.me/g/yblzjz709" class="zbtn" target="_blank">
+                Vào Box Ngay
+            </a>
+        </div>
+
+    </div>
 </div>
 
 <script>
@@ -204,7 +312,7 @@
     const total = 4;
 
     function updateSlider() {
-        track.style.transform = `translateX(${-index * 420}px)`;
+        track.style.transform = `translateX(${-index * 100}%)`;
         dots.forEach(d => d.classList.remove("active"));
         dots[index].classList.add("active");
     }
